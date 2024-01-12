@@ -1,0 +1,13 @@
+I solved this without programming, only a calculator.
+
+Here are all the primes from 1 to 20:
+2 3 5 7 11 13 17 19
+
+By multiplying all the primes together, what will our product not be divisible by? Powers of primes less than 20.
+These include: 
+4 8 16
+9
+
+So we should replace 2 with 16, and 3 with 9, and we will cover all divisibilities from 1 to 20 without any extra factors.
+
+Thus our final answer is 16 * 9 * 5 * 7 * 11 * 13 * 17 * 19.
