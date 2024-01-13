@@ -1,0 +1,11 @@
+Using Euclid's Pythagorean triple generation formula:
+(m^2 - n^2 + 2mn + m^2 + n^2) = 1000
+2m^2 + 2mn = 1000;
+m^2 + mn = 500;
+m(m + n) = 500
+m > n, m and n are not both odd.
+With some quick searching of the divisors of 500, we can find m = 20, n = 5 is the only combination that works.
+Plug m and n back into the formula and we get a = 400 - 25, b = 200, c = 425.
+a = 375, b = 200, c = 425. 375 + 200 + 425 = 1000, as the problem requires.
+Using any calculator, we can tell that sqrt(375^2 + 200^2) = 425, so it is a valid pythagorean triple.
+Now we simply compute the product abc.
