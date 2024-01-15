@@ -1,14 +1,6 @@
 #include <stdio.h>
-
-#define UP -1
-#define DOWN 1
-#define LEFT -1
-#define RIGHT 1
-#define NEUTRAL 0
-
 #define MINIMUM 53
 
-// rowDir and colDir take on the values of the directional macros listed above
 int calcProduct(int table[20][20], int row, int col, int rowDir, int colDir)
 {
 	if ((row + rowDir * 3 >= 20 || row + rowDir * 3 < 0) || (col + colDir * 3 >= 20 || col + colDir * 3 < 0)) return 0; // goes out of bounds
