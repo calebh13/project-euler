@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>]
+#include <stdlib.h>
 #define MAX 200000000
 
 long long col(long long n)
