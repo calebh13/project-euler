@@ -24,6 +24,9 @@ int calcProduct(int table[20][20], int row, int col, int rowDir, int colDir)
 
 int main(void)
 {
+	// Problem statement: What is the greatest product of four adjacent numbers 
+	// in the same direction (up, down, left, right, or diagonally) in the following grid?
+	
 	int table[20][20] =
 	//0 01 02 03 04 05 06 07 08 09 10 11 12 13 14 15 16 17 18 19
 	{{8,02,22,97,38,15,00,40,00,75,04,05,07,78,52,12,50,77,91, 8},
@@ -50,7 +53,7 @@ int main(void)
 	/*
 	For this problem, I'll be utilizing a heuristic based on a large product I found while quickly glancing at the table.
 	In the 7th row, 4th-to-last column, we have 66. Moving downwards, we get 66 * 91 * 88 * 97.
-	Unfortunately I had to replace all 08 and 09s with 8 and 9 respectively as C was interpreting them as octal (and I guess nonal???) digits.
+	Unfortunately I had to replace all 08 and 09s with 8 and 9 respectively as C was interpreting them as octal digits, for which 08 and 09 are not valid.
 	Anyway, to get a bigger product than that, assuming 3 99's, the lowest possible value would be 53. This is because 66 * 91 * 88 * 97 / (99^3) = 52.8.
 	So if there is anything lower than a 53, we know it cannot possibly be bigger than the product I found, therefore we don't need to bother multiplying, which is
 	an expensive operation. I don't think there are any other ways to really optimize this without using some sort of brute-force technique, as there doesn't appear
