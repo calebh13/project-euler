@@ -2,7 +2,10 @@
 
 int main(void)
 {
-    /*
+    /* 
+    PROBLEM STATEMENT: starting in the top left corner of a 20x20 grid, and only moving to the right and down,
+    how many possible paths are there?
+    
     When you start in a 2x2, you have to go right twice and down twice. 
     This means we need to know the number of permutations of RRDD.
 
@@ -25,7 +28,7 @@ int main(void)
     for (int i = 40; i > 20; i--)
     {
         paths *= i; // Compute (2n!)
-        if (i % 2 == 0) paths /= (i / 2); // Divide by n! as we go (to prevent overflow)
+        if (i % 2 == 0) paths /= (i / 2); // Divide by n! as we go (otherwise overflow WILL occur)
     }
     for (int i = 10; i > 0; i--)
     {
