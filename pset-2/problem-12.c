@@ -6,16 +6,18 @@ int calculateDivisors(int n);
 int main(void)
 {
 	/*
+	PROBLEM STATEMENT: What is the value of the first triangular number (sum of the first n natural numbers) to have over five hundred divisors?
+ 
 	The number of divisors of a number is obviously directly related to its number of prime factors. For example, consider 72.
 	72 = 2^3 * 3^2 --> 1 and 72, 2 and 36, 3 and 24, 4 and 18, 6 and 12, 8 and 9 = 12 divisors. 
 	There is a well-known formula for the number of divisors based on prime factorization: take the exponents of the prime factors, add one, and
 	multiply them together. In the case of 72, we get 4 * 3 = 12, which is correct. There are many accessible proofs, so I won't prove it here. 
 	
-	We know the formula for a triangular number: T(n) = (n)(n+1)/2. This has been used in many problems before.
-	We need to calculate the number of divisors for (n/2) and (n+1), then multiply them together. Note that in practice, we take n to be even,
+	We know the formula for a triangular number: T(n) = (n)(n+1)/2. This has been used in many problems before, starting with problem 1.
+	We would like to calculate the number of divisors for (n/2) and (n+1), then multiply them together. Note that in practice, we take n to be even,
 	then calculate divisors of n/2 and n-1 and n+1. This gives us the divisors of both T(n-1) and T(n). In the program, you will see we calculate T(n-1).
 
-	In order for this method to work, we basically need to prove that n/2 is coprime to both n-1 and n+1 to ensure there are no duplicates.
+	In order for this method to work, we essentially need to prove that n/2 is coprime to both n-1 and n+1 to ensure there are no duplicates.
 
 	Let d = gcd(n/2, n-1). This means d divides n/2 and n-1.
 	Because d divides n/2, d must also divide n (by multiplication). d also divides n-1. 
@@ -32,7 +34,6 @@ int main(void)
 	That is the beauty of this algorithm: we know about the divisors of a certain number without knowing the number itself.
 
 	It's worth mentioning that this optimization is totally unneeded for only 500 divisors, but I learned some interesting number theory in the process.
-	Learning is always worth it :)
 	*/
 
 	int n = 2, evenDivisors = 0, oddDivisors = 0; // declared outside for scope reasons
