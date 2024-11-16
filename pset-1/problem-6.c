@@ -3,6 +3,8 @@
 int main(void)
 {
 	/*
+	PROBLEM STATEMENT: Find the difference between the sum of the squares of the first one hundred natural numbers and the square of their sum.
+ 	
 	The square of the sum of the first 100 natural numbers is (n(n+1)/2)^2, by the formula used in problem 1.
 	However, now we need to find a formula for the sum of squares.
 	Squares: 1 + 4 + 9 + 16 + 25 + 36 + ...
