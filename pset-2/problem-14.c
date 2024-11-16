@@ -2,6 +2,13 @@
 #include <stdlib.h>
 #define MAX 200000000
 
+/* 
+Problem statement: the following iterative sequence is defined for positive integers:
+n -> n/2 if n is even
+n -> 3n+1 if n is odd
+Which starting number, under 1 million, produces the longest chain? 
+*/
+
 long long col(long long n)
 {
 	if (n % 2 == 0) return n / 2;
