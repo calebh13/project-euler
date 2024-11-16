@@ -1,6 +1,8 @@
 #include <iostream>
 #include <omp.h>
 
+// PROBLEM STATEMENT: Work out the first ten digits of the sum of the following one-hundred 50-digit numbers (stored in str[]).
+
 // Note: this requires your compiler to support OpenMP
 
 int constexpr NUMCOUNT = 100;
@@ -127,9 +129,8 @@ int main(void)
 
     // Note: ull has range 0 to +18446744073709551615
     // This means we can safely store 19 digits, but we are adding 100 numbers.
-    // When adding 100 n-digit numbers, we will need n+2 digits MAXIMUM.
-    // So we can add 17 digits at a time, giving us a need for 3 threads.
-    // However, to make the math consistent, I will use 5 threads, each adding 10 digits at a time.
+    // When adding 100 n-digit numbers, we will need n+2 digits MAXIMUM (consider the base 10 log of 100).
+    // To make the math work out evenly, I will use 5 threads, each adding 10 digits at a time.
 
     int num_threads = 5;
     ull indivSums[5] = { 0 };
